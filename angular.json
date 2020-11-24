@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/sass/styles.sass"
             ],
             "scripts": []
           },
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "springshop-frontend"
+    }
+  },
+  "defaultProject": "springshop-frontend",
+  "cli": {
+    "analytics": "7ee1d3e3-c2ca-48c9-a430-6237658e446c"
+  }
 }

@@ -7,13 +7,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HomeComponent } from './home/home.component';
 import { PagesComponent } from './pages.component';
+import { CategoriesComponent } from './categories/categories/categories.component';
+import { CategoryComponent } from './categories/category/category.component';
 
+import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    PagesComponent
+    PagesComponent,
+    CategoriesComponent,
+    CategoryComponent
   ],
   exports:[
     PagesComponent
@@ -22,7 +27,8 @@ import { PagesComponent } from './pages.component';
     CommonModule,
     SharedModule,
     RouterModule,
-    NgbModule
+    NgbModule,
+    PipesModule
   ]
 })
 export class PagesModule { }

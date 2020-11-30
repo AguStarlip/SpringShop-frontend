@@ -6,6 +6,7 @@ interface _CategoryUser{
 
 export class Category{
     constructor(
+        public _id: string,
         public description: string,
         public user: _CategoryUser
     ){}

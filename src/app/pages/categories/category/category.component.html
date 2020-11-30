@@ -1,0 +1,76 @@
+<figure class="parallax" [ngStyle]="{'background-image': 'url(' + imgCategory.img + ')'}" *ngFor="let imgCategory of imgCategories">
+    <figcaption class="h1 font-weight-bold">{{imgCategory.description}}</figcaption>
+</figure>
+
+<!-- keep working! - funcionalidad: paneles y filtros -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-4">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Panel Spring Filter</h3>
+                </div>
+                <ul class="list-unstyled components">
+                    <p>Filtros</p>
+                    <li>
+                        <p>Ascendente y Descendente</p>
+                    </li>
+                    <li>
+                        <p>Por precio</p>
+                    </li>
+                    <li>
+                        <p>Por marca</p>
+                    </li>
+                </ul>
+                <br>
+                <hr class="w-75 ml-2">
+                <br>
+                <div class="sidebar-header">
+                    <h3>Panel Spring Detail</h3>
+                </div>
+                <ul class="list-unstyled components">
+                    <p>Detalles de Categoría</p>
+                    <li class="active">
+                        <p>Cantidad de productos</p>
+                    </li>
+                    <li>
+                        <p>En stock</p>
+                    </li>
+                    <li>
+                        <p>Fuera de stock</p>
+                    </li>
+                    <li>
+                        <p>En oferta</p>
+                    </li>
+                    <li>
+                        <p>Con envio</p>
+                    </li>
+                    <li>
+                        <p>Sin envio</p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="row animated fadeIn fast py-5 mb-preload mx-auto" *ngIf="preload">
+            <div class="col">
+                <div class="alert alert-info text-center">
+                    <i class="spinner-border"></i>
+                    <p class="mb-0 h5">Loading</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" *ngIf="!preload">
+            <div class="card-columns">
+                <div class="card" *ngFor="let product of products">
+                    <img class="card-img-top" [src]="product.img | image: 'products'" [alt]="product.name">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ product.name }}</h4>
+                        <p class="card-text font-weight-bold h5">{{ product.unitPrice | currencyFormat | currency:'$':'symbol':'1.0-0'}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

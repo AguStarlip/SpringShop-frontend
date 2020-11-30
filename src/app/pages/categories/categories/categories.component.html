@@ -1,0 +1,24 @@
+<div class="row animated fadeIn fast py-5 mb-preload" *ngIf="preload">
+    <div class="col-6 mx-auto">
+        <div class="alert alert-info text-center">
+            <i class="spinner-border"></i>
+            <p class="mb-0 h5">Loading</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row p-5 mb" *ngIf="!preload">
+        <div class="col">
+            <div class="card-columns">
+                <div class="card" *ngFor="let category of categories">
+                    <a [routerLink]="['/home/category/', category.description | lowercase, category._id]">
+                        <div class="card-body">
+                            <p class="card-title font-weight-bold h5">{{category.description}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

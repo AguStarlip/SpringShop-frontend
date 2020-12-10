@@ -56,16 +56,18 @@
 <div class="container">
   <div class="row justify-content" *ngIf="!preload">
     <div class="col">
-      <br /><br />
+      <br/><br/>
       <h3>Ofertas Springflash</h3>
-      <br />
+      <br/>
       <div class="card-columns">
         <div class="card bg-light" *ngFor="let product of products">
-          <img class="card-img-top " [src]="product.img | image: 'products'" [alt]="product.name"/>
-          <div class="card-body">
-            <h4 class="card-title">{{ product.name }}</h4>
-            <p class="card-text font-weight-bold h5">{{ product.unitPrice | currencyFormat | currency:'$':'symbol':'1.0-0'}}</p>
-          </div>
+          <a [routerLink]="['/home/product', product._id]">
+            <img class="card-img-top " [src]="product.img | image: 'products'" [alt]="product.name"/>
+            <div class="card-body">
+              <h4 class="card-title">{{ product.name }}</h4>
+              <p class="card-text font-weight-bold h5">{{ product.unitPrice | currencyFormat | currency:'$':'symbol':'1.0-0'}}</p>
+            </div>
+          </a>
         </div>
       </div>
       <br />

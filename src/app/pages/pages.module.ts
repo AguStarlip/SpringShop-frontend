@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { PagesComponent } from './pages.component';
 import { CategoriesComponent } from './categories/categories/categories.component';
 import { CategoryComponent } from './categories/category/category.component';
+import { ProductComponent } from './product/product.component';
+import { SearchProductsComponent } from './search-products/search-products.component';
 
 import { PipesModule } from '../pipes/pipes.module';
 
@@ -18,7 +20,9 @@ import { PipesModule } from '../pipes/pipes.module';
     HomeComponent,
     PagesComponent,
     CategoriesComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProductComponent,
+    SearchProductsComponent
   ],
   exports:[
     PagesComponent

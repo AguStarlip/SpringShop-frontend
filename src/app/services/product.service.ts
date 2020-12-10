@@ -31,7 +31,7 @@ export class ProductService {
     localStorage.setItem('token', token);
   }
 
-  getProducts(from: number=0, to: number=6){
+  getProducts(from: number=0, to: number=5){
     const api_url = `${url}/products?from=${from}&to=${to}`;
     return this.http.get<any>(api_url)
                     .pipe(
@@ -44,6 +44,14 @@ export class ProductService {
                         }
                       })
                     );
+  }
+
+  getProductId(_id: string){
+    const api_url = `${url}/products/${_id}`;
+    return this.http.get(api_url)
+                    .pipe(
+                      map((resp: {ok: true, product: Product}) => resp.product)
+                    )
   }
 
 }

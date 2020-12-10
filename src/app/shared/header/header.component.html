@@ -1,14 +1,14 @@
 <header>
     <nav class="container navbar pb-0 navbar-expand-lg navbar-light bg-transparent">
         <div class="col-2">
-            <a class="navbar-brand" href="#">Spring Logo</a>
+            <a class="navbar-brand logo" routerLink="/">SpringShop</a>
         </div>
         
         <div class="row mx-auto">
             <div class="col">
-                <form class="form-inline my-2 my-lg-0 has-search">
+                <form class="form-inline my-2 my-lg-0 has-search" (submit)="redirectToProductSearch(searchTerm.value)">
                     <span class="fa fa-search form-control-feedback"></span>
-                    <input class="form-control mr-sm-2 w-75 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-2 w-75 rounded-pill" type="search" placeholder="Buscar..." aria-label="Search" #searchTerm>
                 </form>
             </div>
 

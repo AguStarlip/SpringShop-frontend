@@ -15,6 +15,8 @@ export class CategoryComponent implements OnInit {
   public productTemp: Product;
   public preload: boolean = true;
   public imgTemp = [];
+  public from: number = 0;
+  public to: number = 10;
   public imgCategories = [
     {
       '_id': '5fa48d0b184cc52c4c5ed9c2',
@@ -79,7 +81,7 @@ export class CategoryComponent implements OnInit {
   getProductsByCategory(){
     this.preload = true;
 
-    this.productService.getProducts()
+    this.productService.getProducts(this.from, this.to)
                         .subscribe(({products}) => {
                           for (let prod of products) {
                             this.activatedRoute.params

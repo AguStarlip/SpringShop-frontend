@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { PagesModule } from './pages/pages.module';
+import { PagesModule } from './modules/pages/pages.module';
 
 import { AppComponent } from './app.component';
+import { AuthModule } from './modules/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +15,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     PagesModule,
-    HttpClientModule
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

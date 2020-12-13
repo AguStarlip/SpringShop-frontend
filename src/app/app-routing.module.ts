@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PagesRoutingModule } from './pages/pages.routing';
+import { PagesRoutingModule } from './modules/pages/pages.routing';
+import { AuthRoutingModule } from './modules/auth/auth.routing';
 
 const routes: Routes = [
 
@@ -12,7 +13,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled' }),
-    PagesRoutingModule
+    PagesRoutingModule,
+    AuthRoutingModule
   ],
   exports: [RouterModule]
 })

@@ -1,0 +1,48 @@
+<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+  <div class="container">
+    <div class="card login-card">
+      <div class="row no-gutters">
+        <div class="col-md-5">
+          <img src="assets/images/login.png" alt="login" class="login-card-img">
+        </div>
+        <div class="col-md-7">
+          <button type="button" class="close m-3" aria-label="Close">
+            <a routerLink="/">&times;</a>
+          </button>
+          <div class="card-body">
+            <div class="brand-wrapper">
+              <img src="assets/images/logo.svg" alt="logo" class="logo">
+            </div>
+            <p class="login-card-description">Logea con tu cuenta</p>
+            <form action="#!">
+                <div class="form-group">
+                  <label for="email" class="sr-only">Email</label>
+                  <input type="email" name="email" id="email" class="form-control" placeholder="Ingresa tu email">
+                </div>
+                <div class="form-group mb-4">
+                  <label for="password" class="sr-only">Password</label>
+                  <input type="password" name="password" id="password" class="form-control" placeholder="***********">
+                </div>
+                <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Recordar contraseña</label>
+                </div>
+                <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
+                <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> O logeate con:</p>
+                <div class="row my-3 d-flex justify-content-center">
+                  <!--Google +-->
+                  <button type="button" class="btn google-btn btn-danger btn-rounded z-depth-1a"><i class="fa fa-google fa-1x"></i></button>
+                </div>
+              </form>
+              <a href="#!" class="forgot-password-link">Olvidaste tu contraseña?</a>
+              <p class="login-card-footer-text">No tenés una cuenta? <a href="#!" class="text-reset">Registrate aquí</a></p>
+              <nav class="login-card-footer-nav">
+                <a href="#!">Terminos de uso.</a>
+                <a href="#!">Condiciónes de privacidad</a>
+              </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
